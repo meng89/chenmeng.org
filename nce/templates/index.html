@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NCE share</title>
+</head>
+<body>
+<form action="download" method="post" name="login">
+    <fieldset>
+        <legend>书籍选择</legend>
+        <input type="radio" name="book" value="nce1"/> nce1 <br />
+        <input type="radio" name="book" value="nce2"/> nce2 <br />
+        <input type="radio" name="book" value="nce3"/> nce3 <br />
+        <input type="radio" name="book" value="nce4"/> nce4 <br />
+    </fieldset>
+
+    <br />
+
+    <fieldset >
+        <legend>阅读此书的正当性</legend>
+        <input type="radio" name="right" value="I have already had right to read" /> 我已有阅读权 <br />
+        <input type="radio" name="right" value="can't buy" /> 买不到此书 <br />
+    </fieldset>
+
+    <br />
+
+    <fieldset>
+        <legend>本站要求</legend>
+        <input type="checkbox" name="site requirement" value="I won't share this ebook by myself" />
+        我同意传递此书给别人前，会确保别人有阅读此书的正当性，并同意该条款。 <br />
+        <input type="checkbox" name="site requirement" value="test_value" />
+        test <br />
+    </fieldset>
+
+    <br />
+
+    <input type="submit" value="下载"/>
+
+</form>
+
+</body>
+</html>
