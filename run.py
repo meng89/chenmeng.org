@@ -3,11 +3,11 @@
 from flask import Flask
 
 from nce import nce
-from sutta import sutta
+from nikaya import nikaya
 
 app = Flask(__name__)
 
 app.register_blueprint(nce, url_prefix='/nce')
-app.register_blueprint(sutta, url_prefix='/sutta')
+app.register_blueprint(nikaya, url_prefix='/nikaya')
 
-app.run(port=80, debug=True)
+app.run(port=8088, debug=True)
