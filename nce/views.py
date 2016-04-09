@@ -4,7 +4,7 @@ from flask import render_template, flash, redirect, request
 
 from . import nce
 
-from .config import NCE_BOOKS_DIR
+from .config import BOOK_DIR
 
 
 @nce.route('/')
@@ -19,6 +19,6 @@ def download():
 
     book = request.form.get('book')
     if book:
-        return flask.send_from_directory(NCE_BOOKS_DIR,
+        return flask.send_from_directory(BOOK_DIR,
                                          '{}.epub'.format(book),
                                          as_attachment=True)

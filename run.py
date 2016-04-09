@@ -10,4 +10,4 @@ app = Flask(__name__)
 app.register_blueprint(nce, url_prefix='/nce')
 app.register_blueprint(nikaya, url_prefix='/nikaya')
 
-app.run(port=8088, debug=True)
+app.run(host='0.0.0.0', port=80, debug=True)

@@ -6,6 +6,6 @@ from flask_autoindex import AutoIndex
 
 from . import nikaya
 
-from .config import BOOKS_DIR
+from .config import BOOK_DIR
 
-AutoIndex(nikaya, browse_root=BOOKS_DIR)
+AutoIndex(nikaya, browse_root=BOOK_DIR)

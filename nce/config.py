@@ -1,1 +1,1 @@
-NCE_BOOKS_DIR = '/media/data/projects/nce/ebook'
+BOOK_DIR = '/media/data/projects/nce/ebook'
