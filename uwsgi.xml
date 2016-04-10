@@ -1,0 +1,16 @@
+<uwsgi>
+    <!-- socket>/var/run/uwsgi.chenmeng.org.sock</socket -->
+    <socket>127.0.0.1:6666</socket>
+    <chdir>/media/chenmeng.org</chdir>
+    <python-path>/media/chenmeng.org</python-path>
+    <virtualenv>/media/chenmeng.org_venv</virtualenv>
+
+    <plugin>python34</plugin>
+
+    <module>chenmeng_org</module>
+    <callable>app</callable>
+
+    <processes>2</processes>
+    <logto>/var/log/chenmeng.org.log</logto>
+    <daemonize>/var/log/uwsgi.log</daemonize>
+</uwsgi>

@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
+from chenmeng_org import app
 
-from flask import Flask
-
-from nce import nce
-from nikaya import nikaya
-
-app = Flask(__name__)
-
-app.register_blueprint(nce, url_prefix='/nce')
-app.register_blueprint(nikaya, url_prefix='/nikaya')
-
-app.run(host='0.0.0.0', port=80, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)

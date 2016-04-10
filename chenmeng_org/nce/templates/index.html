@@ -8,10 +8,11 @@
 <form action="download" method="post" name="login">
     <fieldset>
         <legend>书籍选择</legend>
-        <input type="radio" name="book" value="nce1"/> nce1 <br />
-        <input type="radio" name="book" value="nce2"/> nce2 <br />
-        <input type="radio" name="book" value="nce3"/> nce3 <br />
-        <input type="radio" name="book" value="nce4"/> nce4 <br />
+        {% for book in books %}
+        <input type="radio" name="book" value="{{ book['filename'] }}" />{{ book['filename'] }}
+        <br />
+        {% endfor %}
+
     </fieldset>
 
     <br />
