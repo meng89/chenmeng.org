@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NCE share</title>
+</head>
+<body>
+<form action="download" method="post" name="login">
+    <fieldset>
+        <legend>书籍选择</legend>
+        {% for book in books %}
+        <input type="radio" name="book" value="{{ book['filename'] }}" />{{ book['filename'] }}
+        <br />
+        {% endfor %}
+
+    </fieldset>
+
+    <br />
+
+    <fieldset >
+        <legend>下载此书的合理性</legend>
+
+        <fieldset >
+            <legend>已有阅读权</legend>
+            {% for reasonable in reasonable1 %}
+            <input type="radio" name="reasonable" value="{{ reasonable }}" />{{ reasonable }}<br />
+            {% endfor %}
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+            <legend>不会伤害版权人的权利</legend>
+            {% for reasonable in reasonable2 %}
+            <input type="radio" name="reasonable" value="{{ reasonable }}" />{{ reasonable }}<br />
+            {% endfor %}
+        </fieldset>
+
+    </fieldset>
+
+    <br />
+
+    <fieldset>
+        <legend>本站要求</legend>
+        <input type="checkbox" name="requirement" value="{{ requirement }}" />{{ requirement }}
+    </fieldset>
+
+    <br />
+
+    <input type="submit" value="下载"/>
+
+</form>
+
+</body>
+</html>

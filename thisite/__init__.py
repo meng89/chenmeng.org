@@ -2,7 +2,7 @@
 
 from flask import Flask
 
-from chenmeng_org.nce import nce
+from thisite.nce import nce
 
 app = Flask(__name__)
 
